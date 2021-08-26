@@ -9,7 +9,6 @@ log/
 target/
 
 # Compiled Files
-bin/
 build/
 /bin1/
 java/build/**
