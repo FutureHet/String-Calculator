@@ -18,4 +18,16 @@ public class StringCalculatorTest {
  		assertEquals(stringCalculator.Add(""), 0);
  	}
  	
+ 	public void singleNumber() {
+ 		// Only single number contains 
+ 		assertEquals(stringCalculator.Add("1"), 1);
+ 		assertEquals(stringCalculator.Add("2"), 2);
+ 	}
+ 	
+ 	public void twoNumber() {
+ 		// String contains two numbers with ',' seperated
+ 		assertEquals(stringCalculator.Add("1,2"), 3);
+ 		assertEquals(stringCalculator.Add("2,3"), 5);	
+ 	}
+ 	
 }
