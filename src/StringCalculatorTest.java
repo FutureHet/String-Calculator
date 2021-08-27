@@ -65,6 +65,20 @@ public class StringCalculatorTest {
 		} catch (NegativeNumberException e) {
 			assertEquals(e.getMessage(), "non-negative number expected but get : -2");
 		}
+ 	}
+ 	
+ 	public void multipleNegativeNumber() {
+ 		// Throws exception when negative number is given
+ 		try {
+			stringCalculator.Add("-1,2,-3");
+		} catch (NegativeNumberException e) {
+			assertEquals(e.getMessage(), "non-negative number expected but get : -1, -3");
+		}
 
+ 		try {
+ 			stringCalculator.Add("//?\n-2?3?-4?-5?-6");
+		} catch (NegativeNumberException e) {
+			assertEquals(e.getMessage(), "non-negative number expected but get : -2, -4, -5, -6");
+		}
  	}
 }

@@ -4,7 +4,7 @@ public class NegativeNumberException extends Exception {
       super(message);
    }
 
-   public static NegativeNumberException ThrowExceptionCall(int negativeNumber) {
+   public static NegativeNumberException ThrowExceptionCall(String negativeNumber) {
    	return new NegativeNumberException("non-negative number expected but get : " + negativeNumber);
    }
 }

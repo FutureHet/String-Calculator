@@ -2,6 +2,7 @@ public class AdditionOfNumbers{
 	public static int Sum(String inputString) throws NegativeNumberException {
 
 		int sum = 0;
+		String negativeNumbers = "";
 		int indexOfDel = inputString.indexOf(',');
 
 		while(indexOfDel != -1 || inputString.length()!=0) {
@@ -23,14 +24,14 @@ public class AdditionOfNumbers{
 			}
 			
 			if(extractedNumber < 0) {
-				
-				throw NegativeNumberException.ThrowExceptionCall(extractedNumber);
-				
-			} else if (extractedNumber < 1000) {
-				
-				sum += extractedNumber; 
-			
+				if(negativeNumbers.length() != 0) {
+					negativeNumbers = negativeNumbers + ", " + extractedNumber;
+				} else {
+					negativeNumbers += extractedNumber;
+				}
 			}
+			
+			sum += extractedNumber;
 			
 			if(stringEnded == 1) {
 				break;
