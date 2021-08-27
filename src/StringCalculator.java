@@ -11,20 +11,8 @@ public class StringCalculator {
 			
 		} else {
 			
-	        inputString = inputString.replace("\n",",");
-
-			int indexOfDel = inputString.indexOf(',');
-			
-			if(indexOfDel == -1) {
-			
-				sum = Integer.parseInt(inputString);
-			
-			} else {
-				
-				sum = AdditionOfNumbers.Sum(inputString);
-				
-			}
-
+			String proccessedString = InputPreprocessing.Preprocessing(inputString); 
+			sum = AdditionOfNumbers.Sum(proccessedString);
 		}
 		
 		return sum;

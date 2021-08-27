@@ -25,20 +25,26 @@ public class StringCalculatorTest {
  	}
  	
  	public void twoNumber() {
- 		// String contains two numbers with ',' seperated
+ 		// String contains two numbers with ',' separated
  		assertEquals(stringCalculator.Add("1,2"), 3);
  		assertEquals(stringCalculator.Add("2,3"), 5);	
  	}
  	
  	public void multipleNumbers() {
- 		// String contains more than two numbers with ',' seperated
+ 		// String contains more than two numbers with ',' separated
  		assertEquals(stringCalculator.Add("1,2,3"), 6);
  		assertEquals(stringCalculator.Add("2,3,4,5,6"), 20);	
  	}
  	
- 	public void multipleNumbersWithNewLineDelimeter() {
- 		// String contains more than two numbers with ',' and '\n' seperated
+ 	public void multipleNumbersWithNewLineDelimiter() {
+ 		// String contains more than two numbers with ',' and '\n' separated
  		assertEquals(stringCalculator.Add("1\n2,3"), 6);
  		assertEquals(stringCalculator.Add("2,3\n4,5\n6"), 20);	
  	}
+ 	
+ 	public void differentDelimiters() {
+ 		// Supports any delimiters which is given between "//" and "\n"
+ 		assertEquals(stringCalculator.Add("//;\n1;2;3"), 6);
+ 		assertEquals(stringCalculator.Add("//?\n2?3?4?5?6"), 20);	
+ 	 }
 }

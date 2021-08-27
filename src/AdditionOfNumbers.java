@@ -1,4 +1,4 @@
-class AdditionOfNumbers{
+public class AdditionOfNumbers{
 	public static int Sum(String inputString) {
 
 		int sum = 0;
