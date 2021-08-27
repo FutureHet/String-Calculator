@@ -11,6 +11,7 @@ public class StringCalculator {
 			
 		} else {
 			
+			
 			int indexOfDel = inputString.indexOf(',');
 			
 			if(indexOfDel == -1) {
@@ -19,10 +20,7 @@ public class StringCalculator {
 			
 			} else {
 				
-				String firstNumber = inputString.substring(0,indexOfDel);
-				String secondNumber = inputString.substring(indexOfDel + 1);
-				sum += Integer.parseInt(firstNumber);
-				sum += Integer.parseInt(secondNumber);
+				sum = AdditionOfNumbers.Sum(inputString);
 				
 			}
 

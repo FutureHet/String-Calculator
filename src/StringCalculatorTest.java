@@ -30,4 +30,9 @@ public class StringCalculatorTest {
  		assertEquals(stringCalculator.Add("2,3"), 5);	
  	}
  	
+ 	public void multipleNumbers() {
+ 		// String contains more than two numbers with ',' seperated
+ 		assertEquals(stringCalculator.Add("1,2,3"), 6);
+ 		assertEquals(stringCalculator.Add("2,3,4,5,6"), 20);	
+ 	}
 }
