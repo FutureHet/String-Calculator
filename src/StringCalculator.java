@@ -11,7 +11,8 @@ public class StringCalculator {
 			
 		} else {
 			
-			
+	        inputString = inputString.replace("\n",",");
+
 			int indexOfDel = inputString.indexOf(',');
 			
 			if(indexOfDel == -1) {

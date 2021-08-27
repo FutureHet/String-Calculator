@@ -35,4 +35,10 @@ public class StringCalculatorTest {
  		assertEquals(stringCalculator.Add("1,2,3"), 6);
  		assertEquals(stringCalculator.Add("2,3,4,5,6"), 20);	
  	}
+ 	
+ 	public void multipleNumbersWithNewLineDelimeter() {
+ 		// String contains more than two numbers with ',' and '\n' seperated
+ 		assertEquals(stringCalculator.Add("1\n2,3"), 6);
+ 		assertEquals(stringCalculator.Add("2,3\n4,5\n6"), 20);	
+ 	}
 }
