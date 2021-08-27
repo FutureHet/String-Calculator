@@ -1,6 +1,6 @@
 public class StringCalculator {
 
-	public int Add(String inputString) {
+	public int Add(String inputString) throws NegativeNumberException {
 		
 		int sum = 0;
 		

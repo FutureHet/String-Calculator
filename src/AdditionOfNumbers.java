@@ -1,5 +1,5 @@
 public class AdditionOfNumbers{
-	public static int Sum(String inputString) {
+	public static int Sum(String inputString) throws NegativeNumberException {
 
 		int sum = 0;
 		int indexOfDel = inputString.indexOf(',');
@@ -22,8 +22,16 @@ public class AdditionOfNumbers{
 		
 			}
 			
-			sum += extractedNumber;
-
+			if(extractedNumber < 0) {
+				
+				throw NegativeNumberException.ThrowExceptionCall(extractedNumber);
+				
+			} else if (extractedNumber < 1000) {
+				
+				sum += extractedNumber; 
+			
+			}
+			
 			if(stringEnded == 1) {
 				break;
 			}
