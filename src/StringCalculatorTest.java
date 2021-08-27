@@ -94,9 +94,15 @@ public class StringCalculatorTest {
  		assertEquals(stringCalculator.Add("//[??]\n1??2??3"), 6);
  	}
  	
+ 	public void multipleDelimiterOfVariousLength() throws NegativeNumberException {
+ 		// Delimiter can have various length
+ 		assertEquals(stringCalculator.Add("//[***][\\]\n1***2\\3"), 6);
+ 		assertEquals(stringCalculator.Add("//[??][@@@]\n1??2??3@@@2"), 8);
+ 	}
+ 	
  	@AfterTest
  	public void numberOfTimesAddCalled() {
  		// Number of times Add called
- 		assertEquals(stringCalculator.GetCalledCount(), 15);
+ 		assertEquals(stringCalculator.GetCalledCount(), 20);
  	}
 }
