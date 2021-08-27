@@ -88,6 +88,12 @@ public class StringCalculatorTest {
  		assertEquals(stringCalculator.Add("1,2,10000,3"), 6);
  	}
  	
+ 	public void singleDelimiterOfVariousLength() throws NegativeNumberException {
+ 		// Delimiter can have various length
+ 		assertEquals(stringCalculator.Add("//[***]\n1***2"), 3);
+ 		assertEquals(stringCalculator.Add("//[??]\n1??2??3"), 6);
+ 	}
+ 	
  	@AfterTest
  	public void numberOfTimesAddCalled() {
  		// Number of times Add called
