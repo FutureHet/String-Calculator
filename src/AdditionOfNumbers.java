@@ -29,7 +29,8 @@ public class AdditionOfNumbers{
 				} else {
 					negativeNumbers += extractedNumber;
 				}
-			}
+			} 
+
 			
 			sum += extractedNumber;
 			

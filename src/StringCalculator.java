@@ -22,7 +22,6 @@ public class StringCalculator {
 	}
 	
 	public int GetCalledCount() {
-		System.out.println(NUMBER_OF_TIMES_CALLED);
 		return NUMBER_OF_TIMES_CALLED;
 	}
 }

@@ -1,5 +1,6 @@
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
 import static org.testng.Assert.assertEquals;
 
 @Test
@@ -82,8 +83,9 @@ public class StringCalculatorTest {
 		}
  	}
  	
+ 	@AfterTest
  	public void numberOfTimesAddCalled() {
  		// Number of times Add called
- 		assertEquals(stringCalculator.GetCalledCount(), 11);
+ 		assertEquals(stringCalculator.GetCalledCount(), 15);
  	}
 }
