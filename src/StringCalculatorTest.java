@@ -83,6 +83,11 @@ public class StringCalculatorTest {
 		}
  	}
  	
+ 	public void numberGreaterThanThousand() throws NegativeNumberException {
+ 		// If any number present in the string is greater than 1000 then it should not be added to total sum
+ 		assertEquals(stringCalculator.Add("1,2,10000,3"), 6);
+ 	}
+ 	
  	@AfterTest
  	public void numberOfTimesAddCalled() {
  		// Number of times Add called

@@ -29,10 +29,10 @@ public class AdditionOfNumbers{
 				} else {
 					negativeNumbers += extractedNumber;
 				}
-			} 
+			} else if (extractedNumber <= 1000) {
+				sum += extractedNumber; 
+			}
 
-			
-			sum += extractedNumber;
 			
 			if(stringEnded == 1) {
 				break;
