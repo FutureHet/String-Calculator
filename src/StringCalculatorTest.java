@@ -81,4 +81,9 @@ public class StringCalculatorTest {
 			assertEquals(e.getMessage(), "non-negative number expected but get : -2, -4, -5, -6");
 		}
  	}
+ 	
+ 	public void numberOfTimesAddCalled() {
+ 		// Number of times Add called
+ 		assertEquals(stringCalculator.GetCalledCount(), 11);
+ 	}
 }
